@@ -1,0 +1,140 @@
+freebsd-manpages (8.2-1) unstable; urgency=low
+
+  * New upstream version.
+  * Bump standards version to 3.9.2.
+  * Bump debhelper version to 8.
+
+ -- Gürkan Sengün <gurkan@phys.ethz.ch>  Wed, 04 May 2011 12:06:02 +0200
+
+freebsd-manpages (8.1-1) unstable; urgency=low
+
+  * New upstream version.
+  * Bump standards version to 3.9.1.
+
+ -- Gürkan Sengün <gurkan@phys.ethz.ch>  Thu, 05 Aug 2010 12:17:52 +0200
+
+freebsd-manpages (8.0-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Gürkan Sengün <gurkan@phys.ethz.ch>  Tue, 24 Nov 2009 09:42:18 +0100
+
+freebsd-manpages (8.0~rc3-1) unstable; urgency=low
+
+  * New upstream version.
+  * Bump standards version.
+
+ -- Gürkan Sengün <gurkan@phys.ethz.ch>  Mon, 16 Nov 2009 11:11:06 +0100
+
+freebsd-manpages (8.0~beta3-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Gürkan Sengün <gurkan@phys.ethz.ch>  Thu, 03 Sep 2009 15:16:59 +0200
+
+freebsd-manpages (8.0~beta2-1) unstable; urgency=low
+
+  * New upstream version.
+  * Add GNU/kFreeBSD Maintainers.
+  * Bump standards version.
+
+ -- Gürkan Sengün <gurkan@phys.ethz.ch>  Fri, 17 Jul 2009 11:47:00 +0200
+
+freebsd-manpages (7.2-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Gürkan Sengün <gurkan@phys.ethz.ch>  Sun, 03 May 2009 12:05:51 +0200
+
+freebsd-manpages (7.1-2) unstable; urgency=low
+
+  * Updated debian/rules.
+  * Updated debian/copyright.
+  * Bump standards version.
+
+ -- Gürkan Sengün <gurkan@phys.ethz.ch>  Thu, 09 Apr 2009 16:17:02 +0200
+
+freebsd-manpages (7.1-1) unstable; urgency=low
+
+  * New upstream version.
+  * Updated standards version.
+
+ -- Gürkan Sengün <gurkan@phys.ethz.ch>  Wed, 21 Jan 2009 16:14:39 +0100
+
+freebsd-manpages (7.1~beta1-1) unstable; urgency=low
+
+  * New upstream version.
+  * Update debhelper compat to 7.
+
+ -- Gürkan Sengün <gurkan@phys.ethz.ch>  Tue, 23 Sep 2008 10:28:58 +0200
+
+freebsd-manpages (7.0-2) unstable; urgency=low
+
+  * Move manpages into a freebsd section. (Closes: #367182)
+  * Removed all conflicts.
+  * Updated debian/copyright download URL.
+  * Updated my email address.
+
+ -- Gürkan Sengün <gurkan@phys.ethz.ch>  Wed, 23 Apr 2008 10:43:40 +0200
+
+freebsd-manpages (7.0-1) unstable; urgency=low
+
+  * New upstream version.
+  * debian/control: Bump standards version.
+
+ -- Gürkan Sengün <gurkan@linuks.mine.nu>  Wed, 27 Feb 2008 08:16:50 +0100
+
+freebsd-manpages (7.0~beta2-1) experimental; urgency=low
+
+  * New upstream version.
+  * Updated debian/control conflicts field.
+
+ -- Gürkan Sengün <gurkan@linuks.mine.nu>  Mon, 05 Nov 2007 15:04:58 +0100
+
+freebsd-manpages (7.0~beta1.5-1) experimental; urgency=low
+
+  * New upstream version. (Closes: #365624)
+  * debian/compat: Bump version, no changes needed.
+
+ -- Gürkan Sengün <gurkan@linuks.mine.nu>  Tue, 30 Oct 2007 01:54:07 +0100
+
+freebsd-manpages (6.2-1) unstable; urgency=low
+
+  * New upstream version.
+  * Bump standard version, no changes needed.
+
+ -- Gürkan Sengün <gurkan@linuks.mine.nu>  Mon, 15 Jan 2007 13:18:42 +0100
+
+freebsd-manpages (6.0-5) unstable; urgency=low
+
+  * Add conflicts with (Closes: #365623)
+    - ipchains (linux 2.2 specific)
+    - opie-client
+    - linux-manual-2.6.16
+
+ -- Gürkan Sengün <gurkan@linuks.mine.nu>  Mon,  1 May 2006 19:32:12 +0200
+
+freebsd-manpages (6.0-4) unstable; urgency=low
+
+  * Add section 3 sysctl manual page. (Closes: #363906)
+  * Conflict with fdutils (linux specific).
+
+ -- Gürkan Sengün <gurkan@linuks.mine.nu>  Thu, 20 Apr 2006 16:18:12 +0200
+
+freebsd-manpages (6.0-3) unstable; urgency=low
+
+  * Removed some more manpages from section 4 to co-exist with xorg7.
+
+ -- Gürkan Sengün <gurkan@linuks.mine.nu>  Fri, 14 Apr 2006 13:56:19 +0200
+
+freebsd-manpages (6.0-2) unstable; urgency=low
+
+  * Remove md.4. (Closes: #359210)
+
+ -- Gürkan Sengün <gurkan@linuks.mine.nu>  Tue, 14 Mar 2006 09:46:44 +0100
+
+freebsd-manpages (6.0-1) unstable; urgency=low
+
+  * Initial release. (Closes: #353381)
+
+ -- Gürkan Sengün <gurkan@linuks.mine.nu>  Fri, 17 Feb 2006 20:50:20 +0100

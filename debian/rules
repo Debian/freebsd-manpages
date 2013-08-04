@@ -1,0 +1,67 @@
+#!/usr/bin/make -f
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+DESTDIR=$(CURDIR)/debian/freebsd-manpages
+VER=8.2
+
+build: build-stamp
+
+# make update -f debian/rules
+update:
+	rm -f manpages.a?
+	lftp -e 'mget manpages.a?;exit' ftp://ftp.freebsd.org/pub/FreeBSD/releases/i386/$(VER)-RELEASE/manpages/
+
+build-stamp:
+	dh_testdir
+	cat manpages.a* | tar -xzf -
+	find usr/share/man -name "*gz" -exec gunzip -f {} \;
+	mv usr/share/man/* ./
+	touch build-stamp
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp
+	-rm -rf usr en* man? whatis
+	dh_clean
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_prep
+	dh_installdirs
+	cp -r man2 $(DESTDIR)/usr/share/man/
+	cp man3/sysctl.3 $(DESTDIR)/usr/share/man/man3/sysctl.3freebsd
+	cp -r man4 $(DESTDIR)/usr/share/man/
+	mv $(DESTDIR)/usr/share/man/man4/i386/* $(DESTDIR)/usr/share/man/man4/
+	rm -rf $(DESTDIR)/usr/share/man/man4/i386/
+	cp -r man9 $(DESTDIR)/usr/share/man/
+	for a in 2 4 9; do \
+	    for b in $(DESTDIR)/usr/share/man/man$${a}/*; do \
+	        c=`basename $${b} .gz`; \
+#	        if [ -f /usr/share/man/man$${a}/$${c}.gz ]; then \
+	            echo moving freebsd manpage to subsection freebsd man$${a}/$${c}freebsd; \
+	            mv $(DESTDIR)/usr/share/man/man$${a}/$${c} $(DESTDIR)/usr/share/man/man$${a}/$${c}freebsd; \
+#	        fi \
+	    done \
+	done
+
+binary-arch: build install
+
+binary-indep: build install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs
+	dh_installdocs
+	dh_installman
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install

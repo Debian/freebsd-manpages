@@ -1,0 +1,19 @@
+Source: freebsd-manpages
+Section: doc
+Priority: optional
+Maintainer: GNU/kFreeBSD Maintainers <debian-bsd@lists.debian.org>
+Uploaders: Gürkan Sengün <gurkan@phys.ethz.ch>
+Build-Depends: debhelper (>= 8), manpages, manpages-dev
+Build-Conflicts: freebsd-manpages
+Standards-Version: 3.9.2
+
+Package: freebsd-manpages
+Architecture: all
+Depends: ${misc:Depends}
+Suggests: man-browser
+Description: Manual pages for a GNU/kFreeBSD system
+ This package contains a selection of manual pages from FreeBSD that are
+ useful on a GNU/kFreeBSD system:
+  2 = System calls (functions provided by the kernel)
+  4 = Special files (usually found in /dev)
+  9 = Kernel routines
