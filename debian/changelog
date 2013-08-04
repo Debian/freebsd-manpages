@@ -1,3 +1,9 @@
+freebsd-manpages (8.4-1) UNRELEASED; urgency=low
+  
+  * New upstream version.
+
+ -- Gürkan Sengün <gurkan@phys.ethz.ch>  Sun, 04 Aug 2013 17:06:02 +0200
+
 freebsd-manpages (8.2-1) unstable; urgency=low
 
   * New upstream version.

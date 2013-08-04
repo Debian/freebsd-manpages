@@ -3,7 +3,7 @@
 #export DH_VERBOSE=1
 
 DESTDIR=$(CURDIR)/debian/freebsd-manpages
-VER=8.2
+VER=8.4
 
 build: build-stamp
 
