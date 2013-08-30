@@ -1,6 +1,7 @@
 freebsd-manpages (9.1-1) UNRELEASED; urgency=low
 
   * New upstream version.
+    + Handle multiple architecture subdirectories properly
   * Rename update target to the more common name get-orig-source
   * Rework get-orig-source target to support FreeBSD releases which don't
     offer manpages for download separately.

@@ -36,8 +36,9 @@ install: build
 	dh_testroot
 	dh_prep
 	dh_install
+	# Use i386 directory for architecture-dependent man pages
 	mv $(DESTDIR)/usr/share/man/man4/i386/* $(DESTDIR)/usr/share/man/man4/
-	rm -rf $(DESTDIR)/usr/share/man/man4/i386/
+	rm -rf $(DESTDIR)/usr/share/man/man4/*/
 	for section in 2 4 9; do \
 	    for path in $(DESTDIR)/usr/share/man/man$${section}/*; do \
 	        file=`basename $${path}`; \
