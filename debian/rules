@@ -35,13 +35,9 @@ install: build
 	dh_testdir
 	dh_testroot
 	dh_prep
-	dh_installdirs
-	cp -r share/man/man2 $(DESTDIR)/usr/share/man/
-	cp    share/man/man3/sysctl.3.gz $(DESTDIR)/usr/share/man/man3/sysctl.3freebsd.gz
-	cp -r share/man/man4 $(DESTDIR)/usr/share/man/
+	dh_install
 	mv $(DESTDIR)/usr/share/man/man4/i386/* $(DESTDIR)/usr/share/man/man4/
 	rm -rf $(DESTDIR)/usr/share/man/man4/i386/
-	cp -r share/man/man9 $(DESTDIR)/usr/share/man/
 	for section in 2 4 9; do \
 	    for path in $(DESTDIR)/usr/share/man/man$${section}/*; do \
 	        file=`basename $${path}`; \
