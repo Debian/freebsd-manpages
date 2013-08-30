@@ -13,6 +13,7 @@ freebsd-manpages (8.4-1) UNRELEASED; urgency=low
     + copyright-without-copyright-notice
     + copyright-refers-to-deprecated-bsd-license-file
     + debian-rules-missing-recommended-target
+    + no-homepage-field (Homepage set to http://www.freebsd.org/docproj/)
 
  -- Axel Beckert <abe@debian.org>  Fri, 30 Aug 2013 21:35:08 +0200
 

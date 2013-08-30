@@ -6,6 +6,7 @@ Uploaders: Gürkan Sengün <gurkan@phys.ethz.ch>
 Build-Depends: debhelper (>= 8), manpages, manpages-dev
 Build-Conflicts: freebsd-manpages
 Standards-Version: 3.9.2
+Homepage: http://www.freebsd.org/docproj/
 
 Package: freebsd-manpages
 Architecture: all
