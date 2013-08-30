@@ -2,7 +2,8 @@ Source: freebsd-manpages
 Section: doc
 Priority: optional
 Maintainer: GNU/kFreeBSD Maintainers <debian-bsd@lists.debian.org>
-Uploaders: Gürkan Sengün <gurkan@phys.ethz.ch>
+Uploaders: Gürkan Sengün <gurkan@phys.ethz.ch>,
+           Axel Beckert <abe@debian.org>
 Build-Depends: debhelper (>= 8)
 Standards-Version: 3.9.4
 Homepage: http://www.freebsd.org/docproj/

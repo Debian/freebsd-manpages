@@ -1,6 +1,5 @@
 freebsd-manpages (8.4-1) UNRELEASED; urgency=low
   
-  * Team Upload
   * New upstream version.
   * No more use the split upstream tar ball sources but rebuilt that tar
     ball and use it as .orig.tar.gz
@@ -19,6 +18,7 @@ freebsd-manpages (8.4-1) UNRELEASED; urgency=low
       a directory index. This works perfect as link in the PTS. ;-)
   * Bump Standards-Version to 3.9.4 (no changes)
   * Add Vcs-* headers
+  * Add myself to Uploaders
 
  -- Axel Beckert <abe@debian.org>  Fri, 30 Aug 2013 21:35:08 +0200
 
