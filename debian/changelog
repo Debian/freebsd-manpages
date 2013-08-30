@@ -7,6 +7,7 @@ freebsd-manpages (8.4-1) UNRELEASED; urgency=low
   * No more uncompress man pages. They should be fine as they are.
   * Clean up debian/rules
     + Remove unused code
+    + No more clean up stamp files manually, dh_clean does that already
   * Switch to source format "3.0 (quilt)"
   * Fixes the following lintian warnings:
     + copyright-without-copyright-notice
