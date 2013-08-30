@@ -14,6 +14,8 @@ freebsd-manpages (8.4-1) UNRELEASED; urgency=low
     + copyright-refers-to-deprecated-bsd-license-file
     + debian-rules-missing-recommended-target
     + no-homepage-field (Homepage set to http://www.freebsd.org/docproj/)
+    + debian-watch-file-is-missing (Added fake watch file which downloads
+      a directory index. This works perfect as link in the PTS. ;-)
   * Bump Standards-Version to 3.9.4 (no changes)
   * Add Vcs-* headers
 
