@@ -5,7 +5,9 @@
 DESTDIR=$(CURDIR)/debian/freebsd-manpages
 VER=8.4
 
-build: build-stamp
+build: build-arch build-indep
+build-arch: build-stamp
+build-indep: build-stamp
 
 # make update -f debian/rules
 update:
@@ -54,7 +56,6 @@ binary-indep: build install
 	dh_compress
 	dh_fixperms
 	dh_installdeb
-	dh_shlibdeps
 	dh_gencontrol
 	dh_md5sums
 	dh_builddeb

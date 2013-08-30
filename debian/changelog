@@ -11,6 +11,7 @@ freebsd-manpages (8.4-1) UNRELEASED; urgency=low
   * Switch to source format "3.0 (quilt)"
   * Fixes the following lintian warnings:
     + copyright-without-copyright-notice
+    + debian-rules-missing-recommended-target
 
  -- Axel Beckert <abe@debian.org>  Fri, 30 Aug 2013 21:35:08 +0200
 
