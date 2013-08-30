@@ -1,8 +1,12 @@
 freebsd-manpages (8.4-1) UNRELEASED; urgency=low
   
+  * Team Upload
   * New upstream version.
+  * No more use the split upstream tar ball sources but rebuilt that tar
+    ball and use it as .orig.tar.gz
+  * No more uncompress man pages. They should be fine as they are.
 
- -- Gürkan Sengün <gurkan@phys.ethz.ch>  Sun, 04 Aug 2013 17:06:02 +0200
+ -- Axel Beckert <abe@debian.org>  Fri, 30 Aug 2013 21:35:08 +0200
 
 freebsd-manpages (8.2-1) unstable; urgency=low
 

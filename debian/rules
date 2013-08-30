@@ -11,19 +11,17 @@ build: build-stamp
 update:
 	rm -f manpages.a?
 	lftp -e 'mget manpages.a?;exit' ftp://ftp.freebsd.org/pub/FreeBSD/releases/i386/$(VER)-RELEASE/manpages/
+	cat manpages.a? > ../freebsd-manpages_$(VER).orig.tar.gz
 
 build-stamp:
 	dh_testdir
-	cat manpages.a* | tar -xzf -
-	find usr/share/man -name "*gz" -exec gunzip -f {} \;
-	mv usr/share/man/* ./
 	touch build-stamp
 
 clean:
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp
-	-rm -rf usr en* man? whatis
+	#-rm -rf en* man? whatis
 	dh_clean
 
 install: build
@@ -31,18 +29,20 @@ install: build
 	dh_testroot
 	dh_prep
 	dh_installdirs
-	cp -r man2 $(DESTDIR)/usr/share/man/
-	cp man3/sysctl.3 $(DESTDIR)/usr/share/man/man3/sysctl.3freebsd
-	cp -r man4 $(DESTDIR)/usr/share/man/
+	cp -r share/man/man2 $(DESTDIR)/usr/share/man/
+	cp    share/man/man3/sysctl.3.gz $(DESTDIR)/usr/share/man/man3/sysctl.3freebsd.gz
+	cp -r share/man/man4 $(DESTDIR)/usr/share/man/
 	mv $(DESTDIR)/usr/share/man/man4/i386/* $(DESTDIR)/usr/share/man/man4/
 	rm -rf $(DESTDIR)/usr/share/man/man4/i386/
-	cp -r man9 $(DESTDIR)/usr/share/man/
-	for a in 2 4 9; do \
-	    for b in $(DESTDIR)/usr/share/man/man$${a}/*; do \
-	        c=`basename $${b} .gz`; \
-#	        if [ -f /usr/share/man/man$${a}/$${c}.gz ]; then \
-	            echo moving freebsd manpage to subsection freebsd man$${a}/$${c}freebsd; \
-	            mv $(DESTDIR)/usr/share/man/man$${a}/$${c} $(DESTDIR)/usr/share/man/man$${a}/$${c}freebsd; \
+	cp -r share/man/man9 $(DESTDIR)/usr/share/man/
+	for section in 2 4 9; do \
+	    for path in $(DESTDIR)/usr/share/man/man$${section}/*; do \
+	        file=`basename $${path}`; \
+	        base=`basename $${path} .gz`; \
+	        suffix=`echo $${file} | sed -e s/$${base}//`; \
+#	        if [ -f /usr/share/man/man$${section}/$${base}.gz ]; then \
+	            echo moving freebsd manpage to subsection freebsd man$${section}/$${base}freebsd$${suffix}; \
+	            mv $(DESTDIR)/usr/share/man/man$${section}/$${file} $(DESTDIR)/usr/share/man/man$${section}/$${base}freebsd$${suffix} || exit 1; \
 #	        fi \
 	    done \
 	done
