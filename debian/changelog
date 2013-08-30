@@ -15,6 +15,7 @@ freebsd-manpages (8.4-1) UNRELEASED; urgency=low
     + debian-rules-missing-recommended-target
     + no-homepage-field (Homepage set to http://www.freebsd.org/docproj/)
   * Bump Standards-Version to 3.9.4 (no changes)
+  * Add Vcs-* headers
 
  -- Axel Beckert <abe@debian.org>  Fri, 30 Aug 2013 21:35:08 +0200
 

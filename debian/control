@@ -7,6 +7,8 @@ Build-Depends: debhelper (>= 8), manpages, manpages-dev
 Build-Conflicts: freebsd-manpages
 Standards-Version: 3.9.4
 Homepage: http://www.freebsd.org/docproj/
+Vcs-Svn: svn://anonscm.debian.org/glibc-bsd/trunk/freebsd-manpages
+Vcs-Browser: http://anonscm.debian.org/viewvc/glibc-bsd/trunk/freebsd-manpages/
 
 Package: freebsd-manpages
 Architecture: all
