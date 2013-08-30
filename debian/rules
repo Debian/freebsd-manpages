@@ -3,18 +3,24 @@
 #export DH_VERBOSE=1
 
 DESTDIR=$(CURDIR)/debian/freebsd-manpages
-VER=8.4
+VER=9.1
 
 build: build-arch build-indep
 build-arch: build-stamp
 build-indep: build-stamp
 
-# make update -f debian/rules
-update:
-	rm -f manpages.a?
-	lftp -e 'mget manpages.a?;exit' ftp://ftp.freebsd.org/pub/FreeBSD/releases/i386/$(VER)-RELEASE/manpages/
-	cat manpages.a? > ../freebsd-manpages_$(VER).orig.tar.gz
-	rm -f manpages.a?
+# make -f debian/rules get-orig-source
+../base.txz:
+	cd ../;wget http://ftp.freebsd.org/pub/FreeBSD/releases/i386/$(VER)-RELEASE/base.txz
+../freebsd-manpages_$(VER).orig.tar.xz: ../base.txz
+	mkdir -pv debian/repack
+	# Ignore tar's exit code as both, BSD and GNU tar errors out
+	# on unknown extended header keywords as present in FreeBSD's
+	# tar balls.
+	cd debian/repack; tar xvJf ../../../base.txz ./usr/share/man/man2 ./usr/share/man/man3 ./usr/share/man/man4 ./usr/share/man/man9 || exit 0
+	cd debian/repack; tar cvJf ../../../freebsd-manpages_$(VER).orig.tar.xz ./usr/share/man
+	rm -rf debian/repack
+get-orig-source: ../freebsd-manpages_$(VER).orig.tar.xz
 
 build-stamp:
 	dh_testdir

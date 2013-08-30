@@ -1,3 +1,12 @@
+freebsd-manpages (9.1-1) UNRELEASED; urgency=low
+
+  * New upstream version.
+  * Rename update target to the more common name get-orig-source
+  * Rework get-orig-source target to support FreeBSD releases which don't
+    offer manpages for download separately.
+
+ -- Axel Beckert <abe@debian.org>  Sat, 31 Aug 2013 00:47:15 +0200
+
 freebsd-manpages (8.4-1) unstable; urgency=low
   
   * New upstream version.
