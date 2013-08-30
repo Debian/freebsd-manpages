@@ -3,8 +3,7 @@ Section: doc
 Priority: optional
 Maintainer: GNU/kFreeBSD Maintainers <debian-bsd@lists.debian.org>
 Uploaders: Gürkan Sengün <gurkan@phys.ethz.ch>
-Build-Depends: debhelper (>= 8), manpages, manpages-dev
-Build-Conflicts: freebsd-manpages
+Build-Depends: debhelper (>= 8)
 Standards-Version: 3.9.4
 Homepage: http://www.freebsd.org/docproj/
 Vcs-Svn: svn://anonscm.debian.org/glibc-bsd/trunk/freebsd-manpages

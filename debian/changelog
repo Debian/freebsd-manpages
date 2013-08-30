@@ -8,6 +8,7 @@ freebsd-manpages (8.4-1) UNRELEASED; urgency=low
   * Clean up debian/rules
     + Remove unused code
     + No more clean up stamp files manually, dh_clean does that already
+  * Remove no more needed build dependencies
   * Switch to source format "3.0 (quilt)"
   * Fixes the following lintian warnings:
     + copyright-without-copyright-notice
