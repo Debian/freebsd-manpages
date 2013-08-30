@@ -5,6 +5,8 @@ freebsd-manpages (8.4-1) UNRELEASED; urgency=low
   * No more use the split upstream tar ball sources but rebuilt that tar
     ball and use it as .orig.tar.gz
   * No more uncompress man pages. They should be fine as they are.
+  * Clean up debian/rules
+    + Remove unused code
   * Switch to source format "3.0 (quilt)"
   * Fixes the following lintian warnings:
     + copyright-without-copyright-notice

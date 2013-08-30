@@ -21,7 +21,6 @@ clean:
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp
-	#-rm -rf en* man? whatis
 	dh_clean
 
 install: build
@@ -40,10 +39,8 @@ install: build
 	        file=`basename $${path}`; \
 	        base=`basename $${path} .gz`; \
 	        suffix=`echo $${file} | sed -e s/$${base}//`; \
-#	        if [ -f /usr/share/man/man$${section}/$${base}.gz ]; then \
-	            echo moving freebsd manpage to subsection freebsd man$${section}/$${base}freebsd$${suffix}; \
-	            mv $(DESTDIR)/usr/share/man/man$${section}/$${file} $(DESTDIR)/usr/share/man/man$${section}/$${base}freebsd$${suffix} || exit 1; \
-#	        fi \
+	        echo moving freebsd manpage to subsection freebsd man$${section}/$${base}freebsd$${suffix}; \
+	        mv $(DESTDIR)/usr/share/man/man$${section}/$${file} $(DESTDIR)/usr/share/man/man$${section}/$${base}freebsd$${suffix} || exit 1; \
 	    done \
 	done
 
