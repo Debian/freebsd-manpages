@@ -49,6 +49,7 @@ binary-indep: build install
 	dh_installchangelogs
 	dh_installdocs
 	dh_installman
+	hardlink -m -t $(DESTDIR)/usr/share/man
 	dh_compress
 	dh_fixperms
 	dh_installdeb

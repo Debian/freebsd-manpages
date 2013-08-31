@@ -8,6 +8,10 @@ freebsd-manpages (9.1-1) UNRELEASED; urgency=low
   * Use debian/install and dh_install instead of calling "cp" manually
   * Use prename instead of double for loop to add freebsd man page suffix
     + Add build-dependency on perl
+  * Use hardlink to deduplicate man pages with multiple names after
+    dh_installman's recoding again.
+    + Reduces package size by more than 60%
+    + Add build-dependency on hardlink
 
  -- Axel Beckert <abe@debian.org>  Sat, 31 Aug 2013 00:47:15 +0200
 
