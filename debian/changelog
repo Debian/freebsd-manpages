@@ -13,6 +13,7 @@ freebsd-manpages (9.1-1) UNRELEASED; urgency=low
     dh_installman's recoding again.
     + Reduces package size by more than 60%
     + Add build-dependency on hardlink
+  * Switch to minimal dh7 style debian/rules file.
 
  -- Axel Beckert <abe@debian.org>  Sat, 31 Aug 2013 00:47:15 +0200
 
