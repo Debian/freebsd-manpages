@@ -39,15 +39,7 @@ install: build
 	# Use i386 directory for architecture-dependent man pages
 	mv $(DESTDIR)/usr/share/man/man4/i386/* $(DESTDIR)/usr/share/man/man4/
 	rm -rf $(DESTDIR)/usr/share/man/man4/*/
-	for section in 2 3 4 9; do \
-	    for path in $(DESTDIR)/usr/share/man/man$${section}/*; do \
-	        file=`basename $${path}`; \
-	        base=`basename $${path} .gz`; \
-	        suffix=`echo $${file} | sed -e s/$${base}//`; \
-	        echo moving freebsd manpage to subsection freebsd man$${section}/$${base}freebsd$${suffix}; \
-	        mv $(DESTDIR)/usr/share/man/man$${section}/$${file} $(DESTDIR)/usr/share/man/man$${section}/$${base}freebsd$${suffix} || exit 1; \
-	    done \
-	done
+	prename -v 's/\.(\d)($|\.gz)/.$${1}freebsd$${2}/' $(DESTDIR)/usr/share/man/man*/*
 
 binary-arch: build install
 

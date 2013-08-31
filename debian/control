@@ -4,7 +4,8 @@ Priority: optional
 Maintainer: GNU/kFreeBSD Maintainers <debian-bsd@lists.debian.org>
 Uploaders: Gürkan Sengün <gurkan@phys.ethz.ch>,
            Axel Beckert <abe@debian.org>
-Build-Depends: debhelper (>= 8)
+Build-Depends: debhelper (>= 8),
+               perl
 Standards-Version: 3.9.4
 Homepage: http://www.freebsd.org/docproj/
 Vcs-Svn: svn://anonscm.debian.org/glibc-bsd/trunk/freebsd-manpages
