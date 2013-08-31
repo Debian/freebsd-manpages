@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 # Uncomment this to turn on verbose mode.
-export DH_VERBOSE=1
+#export DH_VERBOSE=1
 
 DESTDIR=$(CURDIR)/debian/freebsd-manpages
 VER=9.1
@@ -13,7 +13,7 @@ override_dh_install:
 	# Use i386 directory for architecture-dependent man pages
 	mv $(DESTDIR)/usr/share/man/man4/i386/* $(DESTDIR)/usr/share/man/man4/
 	rm -rf $(DESTDIR)/usr/share/man/man4/*/
-	prename -v 's/\.(\d)($|\.gz)/.$${1}freebsd$${2}/' $(DESTDIR)/usr/share/man/man*/*
+	prename 's/\.(\d)($|\.gz)/.$${1}freebsd$${2}/' $(DESTDIR)/usr/share/man/man*/*
 
 override_dh_installman:
 	dh_installman
