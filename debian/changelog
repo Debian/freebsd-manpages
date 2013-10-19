@@ -1,8 +1,9 @@
-freebsd-manpages (9.2-1) UNRELEASED; urgency=low
+freebsd-manpages (9.2-1) unstable; urgency=low
 
   * New upstream version.
+  * Upload to unstable again.
 
- -- Axel Beckert <abe@debian.org>  Sat, 19 Oct 2013 22:28:49 +0200
+ -- Axel Beckert <abe@debian.org>  Sat, 19 Oct 2013 23:04:07 +0200
 
 freebsd-manpages (9.1-1) experimental; urgency=low
 
