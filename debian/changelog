@@ -1,3 +1,15 @@
+freebsd-manpages (9.2+1-1) unstable; urgency=low
+
+  * Fix get-orig-source target to use versioned file names for the
+    downloaded base.txz file. Avoids reusing the previous release's
+    base.txz file.
+  * Restrict targets for "dh $@" to not match get-orig-source
+  * Use tar option --no-xattrs instead of ignoring tar's exit code due to
+    unknown extended header keywords as present in FreeBSD's tar balls.
+  * Reupload with correctly generated orig.tar.xz
+
+ -- Axel Beckert <abe@debian.org>  Sun, 20 Oct 2013 00:41:52 +0200
+
 freebsd-manpages (9.2-1) unstable; urgency=low
 
   * New upstream version.
