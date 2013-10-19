@@ -1,3 +1,9 @@
+freebsd-manpages (9.2-1) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Axel Beckert <abe@debian.org>  Sat, 19 Oct 2013 22:28:49 +0200
+
 freebsd-manpages (9.1-1) experimental; urgency=low
 
   * New upstream version.
