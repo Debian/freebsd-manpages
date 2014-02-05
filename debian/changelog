@@ -1,3 +1,9 @@
+freebsd-manpages (9.2+1-2) UNRELEASED; urgency=low
+
+  * Bump Standards-Version to 3.9.5 (no changes)
+
+ -- Axel Beckert <abe@debian.org>  Wed, 05 Feb 2014 21:23:02 +0100
+
 freebsd-manpages (9.2+1-1) unstable; urgency=low
 
   * Fix get-orig-source target to use versioned file names for the
