@@ -1,14 +1,15 @@
-freebsd-manpages (9.2+1-2) UNRELEASED; urgency=low
+freebsd-manpages (10.1~BETA2-1) unstable; urgency=medium
 
-  * Bump Standards-Version to 3.9.6 (no changes)
+  * New upstream beta release
   * Fix debian/watch to also recognize 10.X and Y.10 releases
   * Switch debian/watch to use HTTP instead of FTP
-  * Switch from perl's deprecated prename to (file-)rename
-    + Update build-dependency from perl to rename.
   * Add get-orig-source-beta to debian/rules and support beta versions in
     debian/watch.
+  * Switch from perl's deprecated prename to (file-)rename
+    + Update build-dependency from perl to rename.
+  * Bump Standards-Version to 3.9.6 (no changes)
 
- -- Axel Beckert <abe@debian.org>  Wed, 05 Feb 2014 21:23:02 +0100
+ -- Axel Beckert <abe@debian.org>  Wed, 24 Sep 2014 22:02:06 +0200
 
 freebsd-manpages (9.2+1-1) unstable; urgency=low
 
