@@ -4,3 +4,4 @@ version=3
 # doesn't seem to work with FTP while directory links with trailing
 # slash don't seem to work with HTTP. *sigh*
 http://ftp.freebsd.org/pub/FreeBSD/releases/i386/ (\d+.\d+)-RELEASE/
+http://ftp.freebsd.org/pub/FreeBSD/releases/i386/ (\d+.\d+-BETA\d*)/
