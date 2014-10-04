@@ -1,7 +1,8 @@
 freebsd-manpages (10.1~RC1-1) UNRELEASED; urgency=medium
 
   * New upstream release candidate
-  * Update watch file to handle release candidate
+  * Update watch file to handle release candidates, mangle upstream
+    version to replace dash with tilde.
 
  -- Axel Beckert <abe@debian.org>  Sat, 04 Oct 2014 13:09:57 +0200
 
