@@ -1,3 +1,10 @@
+freebsd-manpages (10.1~RC1-1) UNRELEASED; urgency=medium
+
+  * New upstream release candidate
+  * Update watch file to handle release candidate
+
+ -- Axel Beckert <abe@debian.org>  Sat, 04 Oct 2014 13:09:57 +0200
+
 freebsd-manpages (10.1~BETA2-1) unstable; urgency=medium
 
   * New upstream beta release

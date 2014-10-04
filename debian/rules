@@ -4,7 +4,7 @@
 
 DESTDIR=$(CURDIR)/debian/freebsd-manpages
 VER=10.1
-BETA=BETA2
+BETA=RC1
 
 b% i% c%:
 	dh $@
