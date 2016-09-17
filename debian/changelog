@@ -9,6 +9,9 @@ freebsd-manpages (10.3-1) UNRELEASED; urgency=medium
   * Convert debian/copyright to machine-readable DEP5 format.
   * Update license and copyright years in debian/copyright wrt. to
     COPYRIGHT file in BASE.txz
+  * Include security(7) and securelevel(7) man pages. (Closes: #737717)
+    + Only include the man pages from section 3 and 7 in generated
+      upstream tar ball which are also shipped in the binary package.
 
  -- Axel Beckert <abe@debian.org>  Sat, 17 Sep 2016 23:38:41 +0200
 
