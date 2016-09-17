@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: GNU/kFreeBSD Maintainers <debian-bsd@lists.debian.org>
 Uploaders: Gürkan Sengün <gurkan@phys.ethz.ch>,
            Axel Beckert <abe@debian.org>
-Build-Depends: debhelper (>= 8),
+Build-Depends: debhelper (>= 9),
                hardlink,
                rename
 Standards-Version: 3.9.6
