@@ -8,9 +8,9 @@ Build-Depends: debhelper (>= 8),
                hardlink,
                rename
 Standards-Version: 3.9.6
-Homepage: http://www.freebsd.org/docproj/
+Homepage: https://www.freebsd.org/docproj/
 Vcs-Svn: svn://anonscm.debian.org/glibc-bsd/trunk/freebsd-manpages
-Vcs-Browser: http://anonscm.debian.org/viewvc/glibc-bsd/trunk/freebsd-manpages/
+Vcs-Browser: https://anonscm.debian.org/viewvc/glibc-bsd/trunk/freebsd-manpages/
 
 Package: freebsd-manpages
 Architecture: all

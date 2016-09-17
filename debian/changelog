@@ -2,6 +2,7 @@ freebsd-manpages (10.3-1) UNRELEASED; urgency=medium
 
   * debian/rules: Update get-orig-source* target to cover recent tar
     hardlink issues which caused a non-zero exit code.
+  * Update multiple URLs in the packaging from http:// to https://.
 
  -- Axel Beckert <abe@debian.org>  Sat, 17 Sep 2016 23:38:41 +0200
 
