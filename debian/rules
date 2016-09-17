@@ -10,7 +10,7 @@ ifdef BETA
 UPSVER=$(VER)-$(BETA)
 DEBVER=$(VER)~$(BETA)
 else
-UPSVER=$(VER)
+UPSVER=$(VER)-RELEASE
 DEBVER=$(VER)
 endif
 
