@@ -12,6 +12,7 @@ freebsd-manpages (10.3-1) UNRELEASED; urgency=medium
   * Include security(7) and securelevel(7) man pages. (Closes: #737717)
     + Only include the man pages from section 3 and 7 in generated
       upstream tar ball which are also shipped in the binary package.
+  * Unify get-orig-source and get-orig-source-beta targets via ifdef BETA.
 
  -- Axel Beckert <abe@debian.org>  Sat, 17 Sep 2016 23:38:41 +0200
 

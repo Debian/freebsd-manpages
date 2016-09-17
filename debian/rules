@@ -6,6 +6,14 @@ DESTDIR=$(CURDIR)/debian/freebsd-manpages
 VER=10.3
 #BETA=RC1
 
+ifdef BETA
+UPSVER=$(VER)-$(BETA)
+DEBVER=$(VER)~$(BETA)
+else
+UPSVER=$(VER)
+DEBVER=$(VER)
+endif
+
 b% i% c%:
 	dh $@
 
@@ -20,31 +28,16 @@ override_dh_installman:
 	dh_installman
 	hardlink -m -t $(DESTDIR)/usr/share/man
 
-# make -f debian/rules get-orig-source-beta
-get-orig-source-beta: ../freebsd-manpages_$(VER)~$(BETA).orig.tar.xz
-../freebsd-manpages_$(VER)~$(BETA).orig.tar.xz: ../base-$(VER)-$(BETA).txz
-	mkdir -pv debian/repack1 debian/repack2/usr/share/man/man7 debian/repack2/usr/share/man/man3
-	cd debian/repack1; tar xvJ --no-xattrs -f ../../../base-$(VER)-$(BETA).txz
-	mv -v debian/repack1/usr/share/man/man2 debian/repack1/usr/share/man/man4 debian/repack1/usr/share/man/man9 debian/repack2/usr/share/man/
-	mv -v debian/repack1/usr/share/man/man3/sysctl.3.gz debian/repack2/usr/share/man/man3/
-	mv -v debian/repack1/usr/share/man/man7/secur*.7.gz debian/repack2/usr/share/man/man7/
-	cd debian/repack2; tar cvJf ../../../freebsd-manpages_$(VER)~$(BETA).orig.tar.xz ./usr/share/man
-	rm -rf debian/repack?
-
-../base-$(VER)-$(BETA).txz:
-	wget -O $@ http://ftp.freebsd.org/pub/FreeBSD/releases/i386/$(VER)-$(BETA)/base.txz
-
 # make -f debian/rules get-orig-source
-get-orig-source: ../freebsd-manpages_$(VER).orig.tar.xz
-../freebsd-manpages_$(VER).orig.tar.xz: ../base-$(VER).txz
+get-orig-source: ../freebsd-manpages_$(DEBVER).orig.tar.xz
+../freebsd-manpages_$(DEBVER).orig.tar.xz: ../base-$(UPSVER).txz
 	mkdir -pv debian/repack1 debian/repack2/usr/share/man/man7 debian/repack2/usr/share/man/man3
-	cd debian/repack1; tar xvJ --no-xattrs -f ../../../base-$(VER).txz
+	cd debian/repack1; tar xvJ --no-xattrs -f ../../../base-$(UPSVER).txz
 	mv -v debian/repack1/usr/share/man/man2 debian/repack1/usr/share/man/man4 debian/repack1/usr/share/man/man9 debian/repack2/usr/share/man/
 	mv -v debian/repack1/usr/share/man/man3/sysctl.3.gz debian/repack2/usr/share/man/man3/
 	mv -v debian/repack1/usr/share/man/man7/secur*.7.gz debian/repack2/usr/share/man/man7/
-	cd debian/repack2; tar cvJf ../../../freebsd-manpages_$(VER).orig.tar.xz ./usr/share/man
+	cd debian/repack2; tar cvJf ../../../freebsd-manpages_$(DEBVER).orig.tar.xz ./usr/share/man
 	rm -rf debian/repack?
 
-../base-$(VER).txz:
-	wget -O $@ http://ftp.freebsd.org/pub/FreeBSD/releases/i386/$(VER)-RELEASE/base.txz
-1
+../base-$(UPSVER).txz:
+	wget -O $@ http://ftp.freebsd.org/pub/FreeBSD/releases/i386/$(UPSVER)/base.txz
