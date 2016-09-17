@@ -6,6 +6,7 @@ freebsd-manpages (10.3-1) UNRELEASED; urgency=medium
   * Bump debhelper compatibility to 9. (No gain to bump it to 10 already.)
     + Update versioned debhelper build-dependency accordingly.
   * Declare compliance with Debian Policy 3.9.8. (No changes needed.)
+  * Convert debian/copyright to machine-readable DEP5 format.
 
  -- Axel Beckert <abe@debian.org>  Sat, 17 Sep 2016 23:38:41 +0200
 
