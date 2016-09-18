@@ -1,4 +1,4 @@
-freebsd-manpages (10.3-1) UNRELEASED; urgency=medium
+freebsd-manpages (10.3-1) unstable; urgency=medium
 
   * debian/rules: Update get-orig-source* target to cover recent tar
     hardlink issues which caused a non-zero exit code.
@@ -17,7 +17,7 @@ freebsd-manpages (10.3-1) UNRELEASED; urgency=medium
     {f,ht}tp://ftp.freebsd.org/pub/FreeBSD/releases/i386/ to
     https://download.freebsd.org/ftp/releases/i386/
 
- -- Axel Beckert <abe@debian.org>  Sat, 17 Sep 2016 23:38:41 +0200
+ -- Axel Beckert <abe@debian.org>  Sun, 18 Sep 2016 02:06:13 +0200
 
 freebsd-manpages (10.1~RC1-1) unstable; urgency=medium
 
