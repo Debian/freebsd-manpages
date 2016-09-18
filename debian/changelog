@@ -13,6 +13,9 @@ freebsd-manpages (10.3-1) UNRELEASED; urgency=medium
     + Only include the man pages from section 3 and 7 in generated
       upstream tar ball which are also shipped in the binary package.
   * Unify get-orig-source and get-orig-source-beta targets via ifdef BETA.
+  * Switch download URLs in debian/{rules,copyright} from
+    {f,ht}tp://ftp.freebsd.org/pub/FreeBSD/releases/i386/ to
+    https://download.freebsd.org/ftp/releases/i386/
 
  -- Axel Beckert <abe@debian.org>  Sat, 17 Sep 2016 23:38:41 +0200
 

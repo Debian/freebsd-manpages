@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: FreeBSD Base
 Upstream-Contact: The FreeBSD Project, https://www.freebsd.org/
-Source: ftp://ftp.freebsd.org/pub/FreeBSD/releases/i386/
+Source: https://download.freebsd.org/ftp/releases/i386/
 
 Files: *
 Copyright: 1979-1994 The Regents of the University of California.

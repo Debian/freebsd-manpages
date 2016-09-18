@@ -40,4 +40,4 @@ get-orig-source: ../freebsd-manpages_$(DEBVER).orig.tar.xz
 	rm -rf debian/repack?
 
 ../base-$(UPSVER).txz:
-	wget -O $@ http://ftp.freebsd.org/pub/FreeBSD/releases/i386/$(UPSVER)/base.txz
+	wget -O $@ https://download.freebsd.org/ftp/releases/i386/$(UPSVER)/base.txz
