@@ -1,0 +1,25 @@
+How to import new upstream versions of freebsd-manpages
+=======================================================
+
+1. Edit the wanted upstream version at top of debian/rules. Keep the
+   minor version even on a major release, e.g. use "11.0" instead of
+   just "11". Uncomment the BETA-… line if you intent to package a
+   pre-release upstream version.
+
+2. Run "debian/rules get-orig-source". This will download the whole
+   base.txz file of the wanted release (usually around 70 MB), extract
+   all man pages from it and repack them into a fresh .orig.tar.xz tar
+   ball.
+
+3. If this directory was used for building previous upstream versions
+   of the package, remove the whole "share" directory.
+
+4. Unpack the .orig.tar.xz created in step 2 while stripping the
+   leading "./usr/":
+
+   tar xvJ --strip-components=2 -f ../freebsd-manpages_….orig.tar.xz
+
+5. Update debian/changelog with regards to the new upstream release
+   and see if the package still builds.
+
+ -- Axel Beckert <abe@debian.org>, Wed, 19 Oct 2016 01:03:19 +0200
