@@ -1,3 +1,9 @@
+freebsd-manpages (10.3-2) UNRELEASED; urgency=medium
+
+  * Update Gürkan's family name.
+
+ -- Axel Beckert <abe@debian.org>  Wed, 19 Oct 2016 00:42:25 +0200
+
 freebsd-manpages (10.3-1) unstable; urgency=medium
 
   * debian/rules: Update get-orig-source* target to cover recent tar
