@@ -22,3 +22,4 @@ Description: Manual pages for a GNU/kFreeBSD system
   2 = System calls (functions provided by the kernel)
   4 = Special files (usually found in /dev)
   9 = Kernel routines
+Multi-Arch: foreign
