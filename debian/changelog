@@ -4,6 +4,7 @@ freebsd-manpages (11.0-1) UNRELEASED; urgency=medium
   * Update Gürkan's family name.
   * Add debian/README.source: Document importing a new upstream version.
   * Set "Multi-Arch: foreign" as suggested by the Multi-Arch hinter.
+  * Reduce debian/watch to use a single line for releases and betas.
 
  -- Axel Beckert <abe@debian.org>  Wed, 19 Oct 2016 00:42:25 +0200
 

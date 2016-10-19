@@ -3,10 +3,5 @@ version=3
 # Fake download which points to a directory. uscan's downloadurlmangle
 # doesn't seem to work with FTP while directory links with trailing
 # slash don't seem to work with HTTP. *sigh*
-http://ftp.freebsd.org/pub/FreeBSD/releases/i386/ (\d+.\d+)-RELEASE/
-
-# Betas and RC versions
-opts=uversionmangle=s/-/~/ \
-http://ftp.freebsd.org/pub/FreeBSD/releases/i386/ (\d+.\d+-BETA\d*)/
-opts=uversionmangle=s/-/~/ \
-http://ftp.freebsd.org/pub/FreeBSD/releases/i386/ (\d+.\d+-RC\d*)/
+opts=uversionmangle=s/-(RC|BETA)/~$1/ \
+http://ftp.freebsd.org/pub/FreeBSD/releases/i386/ (\d+.\d+)-(?:RELEASE|RC\d*|BETA\d*)/
