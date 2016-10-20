@@ -1,4 +1,4 @@
-freebsd-manpages (11.0-1) UNRELEASED; urgency=medium
+freebsd-manpages (11.0-1) unstable; urgency=medium
 
   * New upstream release.
   * Update Gürkan's family name.
@@ -6,7 +6,7 @@ freebsd-manpages (11.0-1) UNRELEASED; urgency=medium
   * Set "Multi-Arch: foreign" as suggested by the Multi-Arch hinter.
   * Reduce debian/watch to use a single line for releases and betas.
 
- -- Axel Beckert <abe@debian.org>  Wed, 19 Oct 2016 00:42:25 +0200
+ -- Axel Beckert <abe@debian.org>  Thu, 20 Oct 2016 00:48:47 +0200
 
 freebsd-manpages (10.3-1) unstable; urgency=medium
 
