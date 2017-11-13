@@ -2,6 +2,7 @@ freebsd-manpages (11.1-1) UNRELEASED; urgency=medium
 
   * New upstream release.
   * Declare compliance with Debian Policy 4.1.1.
+  * Remove trailing whitespace from ancient debian/changelog entry.
 
  -- Axel Beckert <abe@debian.org>  Mon, 13 Nov 2017 04:13:23 +0100
 
@@ -96,7 +97,7 @@ freebsd-manpages (9.1-1) experimental; urgency=low
  -- Axel Beckert <abe@debian.org>  Sat, 31 Aug 2013 02:46:45 +0200
 
 freebsd-manpages (8.4-1) unstable; urgency=low
-  
+
   * New upstream version.
   * No more use the split upstream tar ball sources but rebuilt that tar
     ball and use it as .orig.tar.gz
