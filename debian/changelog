@@ -6,6 +6,9 @@ freebsd-manpages (11.1-1) UNRELEASED; urgency=medium
   * Set "Rules-Requires-Root: no".
   * Bump debhelper compatibility to 10.
     + Update versioned debhelper build-dependency accordingly.
+  * Fix debian/watch file: Newer uscan versions seem to append an implicit
+    "$" at the end of the pattern, causing patterns with look-behind
+    patterns (?=…) to no more work as expected.
 
  -- Axel Beckert <abe@debian.org>  Mon, 13 Nov 2017 04:13:23 +0100
 
