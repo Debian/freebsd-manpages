@@ -1,4 +1,4 @@
-freebsd-manpages (11.1-1) UNRELEASED; urgency=medium
+freebsd-manpages (11.1-1) unstable; urgency=medium
 
   * New upstream release.
   * Declare compliance with Debian Policy 4.1.1.
@@ -10,7 +10,7 @@ freebsd-manpages (11.1-1) UNRELEASED; urgency=medium
     "$" at the end of the pattern, causing patterns with look-behind
     patterns (?=…) to no more work as expected.
 
- -- Axel Beckert <abe@debian.org>  Mon, 13 Nov 2017 04:13:23 +0100
+ -- Axel Beckert <abe@debian.org>  Tue, 14 Nov 2017 05:54:35 +0100
 
 freebsd-manpages (11.0-1) unstable; urgency=medium
 
