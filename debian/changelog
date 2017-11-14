@@ -4,6 +4,8 @@ freebsd-manpages (11.1-1) UNRELEASED; urgency=medium
   * Declare compliance with Debian Policy 4.1.1.
   * Remove trailing whitespace from ancient debian/changelog entry.
   * Set "Rules-Requires-Root: no".
+  * Bump debhelper compatibility to 10.
+    + Update versioned debhelper build-dependency accordingly.
 
  -- Axel Beckert <abe@debian.org>  Mon, 13 Nov 2017 04:13:23 +0100
 
